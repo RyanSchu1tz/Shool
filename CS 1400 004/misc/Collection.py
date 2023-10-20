@@ -8,6 +8,7 @@ add docstrings to functions the teacher is a slave to that idea
 import turtle
 import random
 import sys #Unknown or fake
+import math # possibly fake
 
 ##################################################################################################### lists ###  have special code dedicated to it
 '''
@@ -31,7 +32,7 @@ print(twoD_list[0][1])
 '''
 #####################################################################################################  list special code
 '''
-lists[0] # calls the second item in the list (programers don't know how to count so 1 is 2, 0 is 1)
+lists[1] # calls the second item in the list (programers don't know how to count so 1 is 2, 0 is 1)
 lists.append("entry3") # add a new item to the list at the end
 numbers.sort()  # sorts the list by alphebet or numbers
 '''
@@ -81,8 +82,7 @@ def main():
 if __name__ == "__main__":
     main()
 '''
-#####################################################################################################
-
+#####################################################################################################  
 
 
 
