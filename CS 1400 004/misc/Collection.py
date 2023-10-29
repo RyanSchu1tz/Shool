@@ -9,6 +9,7 @@ import turtle
 import random
 import sys #Unknown or fake
 import math # possibly fake
+import csv #fake
 
 ##################################################################################################### lists ###  have special code dedicated to it
 '''
