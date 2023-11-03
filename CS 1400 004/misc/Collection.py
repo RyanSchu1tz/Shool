@@ -83,10 +83,36 @@ def main():
 if __name__ == "__main__":
     main()
 '''
-#####################################################################################################  
+#####################################################################################################  Tuples
+values = (False, True, False, False, False)
+print("Are all values true values?:", all(values)) # all = if all are true, any = if any are true
 
+tyson_items_to_purchase = ('clown', 'puppets', 'fans')
+ryan_items_to_purchase = ('pinata', 'birthday cake', 'streamers', 'pizza', 'frisbee')
+if (any(("birthday cake" or "cake" or "bday cake") in element for element in tyson_items_to_purchase)):
+  print("\nTyson has to buy the cake.")
+if (any(("cake" or "birthday cake" or "bday cake") in element for element in ryan_items_to_purchase)):
+  print("\nRyan has to buy the cake.")
+else:
+  print("\nNo one is supposed to buy the cake.")
 
+numbers = (9, 5, 3, 11, 14, 9, 7, 2)
+numbers_sorted = sorted(numbers)
 
+jobs = ('doctor', 'dentist', 'musician', 'veterinarian', 'computer scientist', 'lawyer', 'electrician')
+jobs_sorted = sorted(jobs, key = len, reverse = True) # keys: len = length
+print(jobs_sorted)
+
+candy_prices = (1.06, 1.32, 1.99, 1.99, 2.00, 1.02, 1.50, 2.99) # zip and unzip
+candy_names = ('Grand Bar', 'Cherry Wurly', 'Almond Milk Crackle', 'Mr. Caramel', 'Dark Ripple', 'Espresso Bark', 'Waffle Day', 'Peanut Butter Sticks')
+
+candy_names_prices = tuple(zip(candy_names, candy_prices))
+print("Tuples 'candy_names' and 'candy_prices' zipped together:", candy_names_prices)
+
+candy_names_unzip, candy_prices_unzip = zip(*candy_names_prices)
+
+print("Candy prices after unzipping Tuple 'candy_names_prices':", candy_prices_unzip)
+print("Candy names after unzipping Tuple 'candy_names_prices':", candy_names_unzip)
 
 
 
