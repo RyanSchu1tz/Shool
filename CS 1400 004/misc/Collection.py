@@ -167,71 +167,50 @@ print(watches2)
 
 
 #1
-def find_key(d, v):
-  keys = list(d.keys())
-  values = list(d.values())
-  index = values.index(v)
-  return keys[index]
+
+txt = input()
+first = txt[0]
+last = txt[-1]
+print("{} is the first character and {} is the last character".format(first, last))
 
 #2
 
-def move_to_bottom(d, k):
-  if k not in d:
-    return 'The key is not in the dictionary'
-  else:
-    value = d.pop(k)
-    d[k] = value
-    return d
-  
+txt = input()
+for i in range(len(txt)):
+    print(txt * len(txt))
+
+
 #3
 
-def swap(d):
-  keys = d.keys()
-  values = d.values()
-  swapped_tuples = zip(values, keys)
-  value_types = [type(elem) for elem in values]
-  
-  if type({}) in value_types or type([]) in value_types:
-    return 'Cannot swap the keys and values for this dictionary'
-  else:
-    new_dict = dict(swapped_tuples)
-    return new_dict
+txt = input()
+second_string = ""
+for char in txt:
+    if char.islower():
+        second_string += "l"
+    elif char.isupper():
+        second_string += "u"
+    else:
+        second_string += "-"
+
+print(second_string)
 
 #4
 
-def is_nested(d):
-  values = d.values()
-  value_types = [type(elem) for elem in values]
-  if type(()) in value_types or type([]) in value_types or type({}) in value_types:
-    return True
-  else:
-    return False
+txt = input()
+midpoint = len(txt) // 2
+first_half = txt[:midpoint]
+second_half = txt[midpoint:]
+print(first_half)
+print(second_half)
 
 #5
 
-import json
+txt = input()
+length = len(txt)
+swapped_string = ""
 
-def compare(f1, f2):
-  with open(f1) as file1, open(f2) as file2:
-    data1 = json.load(file1)
-    data2 = json.load(file2)
-    if data1 == data2:
-      return 'The dictionaries are equal'
-    else:
-      count1 = len(data1)
-      count2 = len(data2)
-      if count1 > count2:
-        return 'Dictionary 1 is longer than dictionary 2'
-      elif count2 > count1:
-        return 'Dictionary 2 is longer than dictionary 1'
-      else:
-        return 'Dictionary 1 and dictionary 2 have the same length'
-      
-#6
+for i in range(0, length - 1, 2):
+    swapped_string += txt[i + 1]
+    swapped_string += txt[i]
 
-
-
-
-
-
-
+print(swapped_string)
